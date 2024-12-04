@@ -1,0 +1,62 @@
+.my-polaris-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .header {
+        padding: 20px;
+        background-color: var(--p-surface-subdued);
+        border-radius: var(--p-border-radius-200);
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+        }
+    }
+
+    .contact-form {
+        padding: 20px 0;
+
+        .Polaris-TextField__Input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--p-border-subdued);
+            border-radius: var(--p-border-radius-200);
+            font-size: var(--p-font-size-100);
+            line-height: var(--p-font-line-height-400);
+
+            &:focus {
+                outline: none;
+                border-color: var(--p-focused);
+                box-shadow: 0 0 0 1px var(--p-focused);
+            }
+        }
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .my-polaris-container {
+        padding: 10px;
+
+        .header {
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-end;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .my-polaris-container {
+        :global(.Polaris-InlineGrid) {
+            grid-template-columns: 1fr !important;
+        }
+    }
+}
